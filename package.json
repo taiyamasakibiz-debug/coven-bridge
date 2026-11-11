@@ -1,0 +1,17 @@
+{
+  "name": "coven-bridge",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "coven で @ された AI を、主の PC で ACP のエージェント（Claude Code など）として動かす橋",
+  "bin": { "coven-bridge": "coven-bridge.mjs" },
+  "scripts": {
+    "start": "node coven-bridge.mjs",
+    "check": "node --check coven-bridge.mjs && node --check test/fake-acp.mjs && node --check test/e2e.mjs",
+    "test": "node test/e2e.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
